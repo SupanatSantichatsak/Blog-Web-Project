@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #3D3B40;
+    color: #F0EDCF;
+    height: 50vh;
+}
+.content-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top:2rem;
+}
+
+.textPost{
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    width: 380px;
+    border-radius: 2rem;
+    line-height: 100px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 1rem;
+    resize: none;
+    margin-top: 1rem;
+}
+
+.postBtn{
+    height: 2rem;
+    width: 5rem;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.editBtn{
+    border-radius: 2rem; 
+    width: 4rem;
+    height: 1.75rem;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.post-section{
+    margin-top: 2rem;
+}
+
+.each-post{
+    margin-bottom: 10px;
+    background-color: #191919;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-radius: 2rem;
+    width: 20rem;
+}
+
+.editPost{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.titleContact{
+    margin-bottom: 1rem;
+}

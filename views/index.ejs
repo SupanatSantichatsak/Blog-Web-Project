@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="px-3 py-2 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001"/>
+                  </svg>
+            </a>
+  
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+              <li>
+                <a href="/" class="nav-link text-white">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/about" class="nav-link text-white">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="nav-link text-white">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+<div class="content-section">
+    <h1>What's on your mind?</h1>
+    <form class="text-section" action="/" method="post">
+        <textarea maxlength="35" class="textPost" name="content" placeholder="Type here"></textarea>
+        <button class="postBtn" type="submit" name="post">Post</button>
+    </form>
+
+<div class="post-section">
+    <form action="/edit" method="post">
+        <% if(content && content.length > 0){ %>
+            <%content.map((post,index)=>{%>
+                <div class="each-post">
+                <p><%= post%></p>
+                <button class="editBtn" type="submit" name="id" value=<%=index%>>Edit</button>
+                </div>
+            <%})%>
+        <% } else { %>
+            <p>Write something 🖊️</p>
+        <% } %>
+    </form>
+</div>
+</div>
+
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+      <div>
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span>© 2024 Supanat Santichatsak</span>
+      </div>
+    </footer>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
